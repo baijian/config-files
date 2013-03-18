@@ -14,3 +14,5 @@
     cmd = vim -f -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [merge]
     tool = vimdiff
+[color "diff"]
+    meta = black white bold   
