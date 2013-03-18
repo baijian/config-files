@@ -7,3 +7,4 @@ My config files
     `git config --global user.name 柏健`
 * 2.file location
     ~/.gitconfig
+
