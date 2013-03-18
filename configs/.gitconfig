@@ -1,0 +1,16 @@
+[user]
+    name = 柏健
+	email = jian.baij@gmail.com
+[color]
+    ui = true
+[alias]
+    ci = commit
+    co = checkout
+    s = status
+#    st = stash
+    br = branch
+    rm = remote
+[mergetool "vimdiff"]
+    cmd = vim -f -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+[merge]
+    tool = vimdiff
