@@ -21,6 +21,7 @@ My config files
 
 ###vim config
 ---
++ first should install ctags
 + .vim directory to home directory
 + .vimrc file to home directory
 
