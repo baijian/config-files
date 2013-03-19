@@ -21,6 +21,8 @@ My config files
 
 ###vim config
 ---
++ .vim directory to home directory
++ .vimrc file to home directory
 
 ###bashrc config
 ---
