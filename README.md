@@ -1,7 +1,7 @@
 My config files
 ===
 
-###git config(http://git-scm.com/book/en/Customizing-Git)
+##git config(http://git-scm.com/book/en/Customizing-Git)
 ---
 * 1.Example:
 
@@ -19,13 +19,13 @@ My config files
 
     repo/.git/config
 
-###vim config
+##vim config
 ---
 + first should install ctags
 + .vim directory to home directory
 + .vimrc file to home directory
 
-###bashrc config
+##bashrc config
 ---
 ####some concepts
 + /bin/bash => the bash executable
