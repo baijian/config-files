@@ -41,5 +41,5 @@ My config files
     So, you put PATH, PS1... settings to ~/.bashrc to apply to both file.
 
 ####confs added to ~/.bashrc
-    
+     
     PS1='$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "[\[\e[0;32m\]\u\[\e[01;34m\]@\[\e[0;31m\]\h\[\e[0;33m\]\w\[\e[01;33m\](\[\e[01;34m\]$(git branch | grep ^*|sed s/\*\ //) $(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; if [ "$?" -eq "0" ]; then echo "\[\e[01;32m\]clean"; else echo "\[\e[01;31m\]dirty"; fi)\[\e[01;33m\])\[\e[0m\]]\n\[\e[01;34m\]\$\[\e[0m\]"; else echo "[\[\e[0;32m\]\u\[\e[01;34m\]@\[\e[0;31m\]\h \[\e[0;33m\]\w\[\e[m\]]\n\[\e[01;34m\]\$"; fi) \[\e[0m\]'
