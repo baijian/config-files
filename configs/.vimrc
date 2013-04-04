@@ -93,3 +93,28 @@ let g:winManagerWidth = 25
 nmap <silent><F2> :WMToggle<CR>
 let g:AutoOpenWinManager = 0
 
+" vim 背景透明
+hi Normal ctermbg=None ctermfg=White
+
+"高亮 行显示
+set cursorline
+hi CursorLine cterm=None ctermbg=grey ctermfg=None
+
+"高亮列显示
+set cursorcolumn
+hi CursorColumn cterm=None ctermbg=grey ctermfg=None
+
+"注释 颜色
+hi Comment cterm=None ctermbg=white ctermfg=black
+
+"显示状态栏
+set laststatus=2
+hi StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+function! CurDir()
+    let curdir = substitute(getcwd(), $HOME, "~", "g")
+    return curdir
+endfunction
+set statusline=[%n]\ %f%m%r%h\ \|\ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\ @\ %{hostname()}\ 
+
+
+
