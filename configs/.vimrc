@@ -100,21 +100,21 @@ hi Normal ctermbg=None ctermfg=White
 set cursorline
 hi CursorLine cterm=None ctermbg=grey ctermfg=None
 
-"高亮列显示
-set cursorcolumn
-hi CursorColumn cterm=None ctermbg=grey ctermfg=None
-
-"注释 颜色
-hi Comment cterm=None ctermbg=white ctermfg=black
-
-"显示状态栏
-set laststatus=2
-hi StatusLine cterm=bold ctermfg=yellow ctermbg=blue
-function! CurDir()
-    let curdir = substitute(getcwd(), $HOME, "~", "g")
-    return curdir
-endfunction
-set statusline=[%n]\ %f%m%r%h\ \|\ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\ @\ %{hostname()}\ 
-
-
+""高亮列显示
+"set cursorcolumn
+"hi CursorColumn cterm=None ctermbg=grey ctermfg=None
+"
+""注释 颜色
+"hi Comment cterm=None ctermbg=white ctermfg=black
+"
+""显示状态栏
+"set laststatus=2
+"hi StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+"function! CurDir()
+"    let curdir = substitute(getcwd(), $HOME, "~", "g")
+"    return curdir
+"endfunction
+"set statusline=[%n]\ %f%m%r%h\ \|\ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\ @\ %{hostname()}\ 
+"
+"
 
