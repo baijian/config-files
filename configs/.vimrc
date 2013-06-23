@@ -7,7 +7,7 @@ autocmd BufReadPost *
                                     \ endif
 "让vim记忆上次编辑的位置
 set mouse=a
-set nocp
+"set nocp
 set nu
 set ru
 "set hl
@@ -97,7 +97,7 @@ let g:AutoOpenWinManager = 0
 hi Normal ctermbg=None ctermfg=White
 
 "高亮 行显示
-set cursorline
+"set cursorline
 hi CursorLine cterm=None ctermbg=grey ctermfg=None
 
 ""高亮列显示
