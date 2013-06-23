@@ -1,16 +1,17 @@
 colorscheme evening
 
-"让vim记忆上次编辑的位置
+"let vim remember the location you edit last time
 autocmd BufReadPost *
-            \ if line("'\"")>0&&line("'\"")<=line("$") |
-                        \   exe "normal g'\"" |
-                                    \ endif
-"让vim记忆上次编辑的位置
-set mouse=a
-"set nocp
+    \ if line("'\"")>0&&line("'\"")<=line("$") |
+        \   exe "normal g'\"" |
+    \ endif
+"it can use mouse copy now 
+set mouse=
+"not fit for vi
+set nocp
 set nu
 set ru
-"set hl
+set hls
 set is
 syntax on
 set backspace=indent,eol,start
@@ -19,7 +20,7 @@ set encoding=utf-8
 set langmenu=zh_CN.UTF-8
 "language message zh_CN.UTF-8
 set ambiwidth=double
-"filetype plugin indent on
+filetype plugin indent on
 
 set sw=4
 set ts=4
@@ -27,13 +28,14 @@ set et
 set smarttab
 "set spell
 
-"set tw=78
+"set tw=80
 set lbr
 set fo+=mB 
 
 set sm
 set cin
-":set paste     "set nopaste
+"set paste     
+"set nopaste
 "set cino=:0g0t0(sus
 set ai
 
@@ -58,7 +60,7 @@ nnoremap <C-k> <C-w>k
 
 """"""""""""""""""""""""""""""""""""""""""""""
  if has("unix")
-     let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+     let Tlist_Ctags_Cmd = "/usr/bin/ctags"
  endif
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
@@ -98,7 +100,7 @@ hi Normal ctermbg=None ctermfg=White
 
 "高亮 行显示
 "set cursorline
-hi CursorLine cterm=None ctermbg=grey ctermfg=None
+"hi CursorLine cterm=None ctermbg=grey ctermfg=None
 
 ""高亮列显示
 "set cursorcolumn

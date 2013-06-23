@@ -1,15 +1,15 @@
 My config files
 ===
 
-##git config(http://git-scm.com/book/en/Customizing-Git)
+## [Git Config](http://git-scm.com/book/en/Customizing-Git).
 ---
 * 1.Example:
 
-    `git config --system user.name 柏健`
+    `git config --system user.name baijian`
 
-    `git config --global user.name 柏健`
+    `git config --global user.name baijian`
 
-    `git config --local user.name 柏健`
+    `git config --local user.name baijian`
 
 * 2.File location
 
