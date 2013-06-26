@@ -41,10 +41,25 @@ My config files
     So, you put PATH, PS1... settings to ~/.bashrc to apply to both file.
 
 ####confs added to ~/.bashrc
-     
-    PS1='$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "[\[\e[0;32m\]\u\[\e[01;34m\]@\[\e[0;31m\]\h\[\e[0;33m\]\w\[\e[01;33m\](\[\e[01;34m\]$(git branch | grep ^*|sed s/\*\ //) $(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; if [ "$?" -eq "0" ]; then echo "\[\e[01;32m\]clean"; else echo "\[\e[01;31m\]dirty"; fi)\[\e[01;33m\])\[\e[0m\]]\n\[\e[01;34m\]\$\[\e[0m\]"; else echo "[\[\e[0;32m\]\u\[\e[01;34m\]@\[\e[0;31m\]\h \[\e[0;33m\]\w\[\e[m\]]\n\[\e[01;34m\]\$"; fi) \[\e[0m\]'
 
-ANDROID_SDK=/.../.../android-sdk-linux
+```text
+PS1='$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "[\[\e[0;32m\]\u\[\e[01;34m\]@\[\e[0;31m\]\h\[\e[0;33m\]\w\[\e[01;33m\](\[\e[01;34m\]$(git branch | grep ^*|sed s/\*\ //) $(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; if [ "$?" -eq "0" ]; then echo "\[\e[01;32m\]clean"; else echo "\[\e[01;31m\]dirty"; fi)\[\e[01;33m\])\[\e[0m\]]\n\[\e[01;34m\]\$\[\e[0m\]"; else echo "[\[\e[0;32m\]\u\[\e[01;34m\]@\[\e[0;31m\]\h \[\e[0;33m\]\w\[\e[m\]]\n\[\e[01;34m\]\$"; fi) \[\e[0m\]'
 
-PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
+export CATALINA_HOME="/to/your/directory/apache-tomcat-7.0.39"
+export JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"
+export PATH=$PATH:/usr/lib/jvm/java-6-openjdk-amd64/bin
 
+PROJECTS=$HOME/your/directory/place-android-sdk/
+
+ANDROID_SDK=$PROJECTS/android-sdk-linux
+ANDROID_SDK_TOOLS=$ANDROID_HOME/tools
+ANDROID_SDK_PLATFORM_TOOL=$ANDROID_SDK/platform-tools
+PATH=$PATH:$ANDROID_SDK_TOOLS:$ANDROID_SDK_PLATFORM_TOOL
+
+export ANDROID_HOME=$ANDROID_SDK
+export PATH=$PATH
+
+alias adbk='$ANDROID_SDK_PLATFORM_TOOL/adb kill-server'
+alias adbs='sudo $ANDROID_SDK_PLATFORM_TOOL/adb devices'
+alias adbr='adbk && adbs'
+````
