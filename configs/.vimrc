@@ -16,7 +16,7 @@ set is
 syntax on
 set backspace=indent,eol,start
 "set whichwrap=b,s,<,>,[,]
-set encoding=utf-8
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 set langmenu=zh_CN.UTF-8
 "language message zh_CN.UTF-8
 set ambiwidth=double
