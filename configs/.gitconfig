@@ -3,6 +3,7 @@
 	email = jian.baij@gmail.com
 [color]
     ui = true
+    editor = vim
 [alias]
     ci = commit
     co = checkout
