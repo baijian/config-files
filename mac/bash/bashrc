@@ -14,3 +14,7 @@ for completion in "/usr/local/etc/bash_completion.d/*"
 do
     source $completion
 done
+
+if [ -f "$HOME/.phpbrew/bashrc" ] ; then
+    source $HOME/.phpbrew/bashrc
+fi
