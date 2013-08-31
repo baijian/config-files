@@ -18,3 +18,8 @@ done
 if [ -f "$HOME/.phpbrew/bashrc" ] ; then
     source $HOME/.phpbrew/bashrc
 fi
+
+if [ -f "$HOME/perl5/perlbrew/etc/bashrc" ] ; then
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
+
