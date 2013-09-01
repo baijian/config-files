@@ -1,11 +1,18 @@
+PATH=$PATH:$HOME/Bin
 
 alias ls='ls -G'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#RVM config
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if [ -s "$HOME/.rvm/scripts/rvm" ] ; then
+    source "$HOME/.rvm/scripts/rvm"
+    #PATH=$PATH:$HOME/.rvm/bin
+fi
 
+#git ps1 
 if [ -x "$HOME/bin/git-ps1.sh" ]; then
     PS1="$PS1\$($( cat $HOME/Bin/git-ps1.sh ))"
 fi
@@ -15,14 +22,39 @@ do
     source $completion
 done
 
+#phpbrew
 if [ -f "$HOME/.phpbrew/bashrc" ] ; then
     source $HOME/.phpbrew/bashrc
 fi
 
+#perlbrew
 if [ -f "$HOME/perl5/perlbrew/etc/bashrc" ] ; then
     source $HOME/perl5/perlbrew/etc/bashrc
 fi
 
+#pythonbrew
 if [ -f "$HOME/.pythonbrew/etc/bashrc" ] ; then
     source $HOME/.pythonbrew/etc/bashrc
 fi
+
+#bash cpmpletion
+for completion in "/usr/local/etc/bash_completion.d/*"
+do
+    source $completion
+done
+
+#JAVA config
+export JAVA_HOME="/System/Library/Frameworks/Java.VM.framework/Versions/1.6.0/Home"
+PATH=${JAVA_HOME}/bin:$PATH
+
+#Android config
+ANDROID_SDK=$HOME/Develop/android-sdk
+ANDROID_SDK_TOOLS=$ANDROID_SDK/tools
+ANDROID_SDK_PLATFORM_TOOL=$ANDROID_SDK/platform-tools
+PATH=$PATH:$ANDROID_SDK_TOOLS:$ANDROID_SDK_PLATFORM_TOOL
+
+export PATH=$PATH
+
+alias abdk='$ANDROID_SDK_PLATFORM_TOOL/adb kill-server'
+alias adbs='sudo $ANDROID_SDK_PLATFORM_TOOL/adb devices'
+alias andr='adbk && abds'
