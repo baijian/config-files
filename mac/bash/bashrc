@@ -58,3 +58,8 @@ export PATH=$PATH
 alias abdk='$ANDROID_SDK_PLATFORM_TOOL/adb kill-server'
 alias adbs='sudo $ANDROID_SDK_PLATFORM_TOOL/adb devices'
 alias andr='adbk && abds'
+
+# Work bashrc
+if [ -f "$HOME/.bashrc_work" ] ; then
+    source $HOME/.bashrc_work
+fi
