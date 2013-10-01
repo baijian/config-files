@@ -120,3 +120,4 @@ hi Normal ctermbg=None ctermfg=White
 "
 "
 
+command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
