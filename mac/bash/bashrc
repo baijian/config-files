@@ -63,3 +63,5 @@ alias andr='adbk && abds'
 if [ -f "$HOME/.bashrc_work" ] ; then
     source $HOME/.bashrc_work
 fi
+
+alias lsport='sudo lsof -i -P | grep -i listen'
